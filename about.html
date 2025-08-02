@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnFlare - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-circle">
+                    <span class="logo-text">LF</span>
+                </div>
+                <span class="brand-text">LearnFlare</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto me-4">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <a class="nav-link active" href="about.html">About Us</a>
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-outline-primary me-2 mb-2 mb-lg-0" href="kids.html">Kids Courses</a>
+                </div>
+                <div class="d-flex flex-column flex-lg-row gap-2">
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-register" data-bs-toggle="modal"
+                        data-bs-target="#registerModal">Register</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Welcome Back to LearnFlare</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword"
+                                placeholder="Enter your password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="text-decoration-none">Forgot your password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Don't have an account?
+                        <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal"
+                            class="text-decoration-none fw-bold">Create one here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Join LearnFlare Today</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="registerName" placeholder="Enter your full name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword"
+                                placeholder="Create a password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword"
+                                placeholder="Confirm your password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">
+                                I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a
+                                    href="#" class="text-decoration-none">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Already have an account?
+                        <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal"
+                            class="text-decoration-none fw-bold">Sign in here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <!-- Mission Statement -->
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h1 class="mission-title">Our mission is to increase the<br>knowledge of your students</h1>
+                    <p class="mission-description">Education is one of the most important investments you can make<br>
+                        That's why we don't limit our students of every skill—from core content like<br>
+                        to public commitment—our online software to strengthen their fundamentals</p>
+                </div>
+            </div>
+
+            <!-- Partner Logos -->
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <p class="partners-text">We're working with some of the best</p>
+                    <div class="partners-logos">
+                        <div class="partner-logo">
+                            <i class="fab fa-microsoft"></i>
+                            <span>Microsoft</span>
+                        </div>
+                        <div class="partner-logo">
+                            <i class="fab fa-google"></i>
+                            <span>Google</span>
+                        </div>
+                        <div class="partner-logo">
+                            <i class="fab fa-amazon"></i>
+                            <span>Amazon</span>
+                        </div>
+                        <div class="partner-logo">
+                            <i class="fab fa-apple"></i>
+                            <span>Apple</span>
+                        </div>
+                        <div class="partner-logo">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Coursera</span>
+                        </div>
+                        <div class="partner-logo">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>EduTech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team Section -->
+    <section class="leadership-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <h2 class="section-title">Leadership Team</h2>
+                    <p class="section-subtitle">We're a cross-disciplinary team<br>
+                        that loves to create great learning experiences and education that work.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="member-name">Sarah Johnson</h4>
+                        <p class="member-title">Co-Founder & CEO</p>
+                        <p class="member-description">Leading educational innovation at LearnFlare with over 15 years in
+                            edtech development.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="member-name">Michael Chen</h4>
+                        <p class="member-title">Co-Founder & CTO</p>
+                        <p class="member-description">Building the future of online learning platforms with cutting-edge
+                            technology.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="member-name">Emily Rodriguez</h4>
+                        <p class="member-title">Head of Education</p>
+                        <p class="member-description">Curriculum designer passionate about creating engaging learning
+                            experiences.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-medium"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="member-name">David Kim</h4>
+                        <p class="member-title">Lead Instructor</p>
+                        <p class="member-description">Expert educator with a passion for making complex topics
+                            accessible to all students.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="member-name">Lisa Wang</h4>
+                        <p class="member-title">Student Success Manager</p>
+                        <p class="member-description">Dedicated to helping every student achieve their learning goals
+                            and reach their potential.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h4 class="member-name">James Miller</h4>
+                        <p class="member-title">Product Manager</p>
+                        <p class="member-description">Focused on creating intuitive learning experiences that make
+                            education accessible worldwide.</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- We're Hiring Section -->
+    <section class="hiring-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hiring-content">
+                        <h2 class="hiring-title">We're hiring</h2>
+                        <h3 class="hiring-subtitle">Start doing work that matters</h3>
+                        <p class="hiring-description">Our philosophy is simple — hire a team of diverse, passionate
+                            people and foster a culture that empowers you to do your best work.</p>
+
+                        <!-- Job Listings -->
+                        <div class="job-listing">
+                            <div class="job-item">
+                                <div class="job-header">
+                                    <h4>Curriculum Designer</h4>
+                                    <span class="job-location">Remote</span>
+                                </div>
+                                <p>We're looking for a mid-level curriculum designer to join our team.</p>
+                                <div class="job-meta">
+                                    <span class="job-type"><i class="fas fa-clock"></i> Full-time</span>
+                                    <span class="job-salary">$80k-120k</span>
+                                </div>
+                            </div>
+
+                            <div class="job-item">
+                                <div class="job-header">
+                                    <h4>Learning Experience Designer</h4>
+                                    <span class="job-location">Hybrid</span>
+                                </div>
+                                <p>We're looking for a mid-level product designer to join our team.</p>
+                                <div class="job-meta">
+                                    <span class="job-type"><i class="fas fa-clock"></i> Full-time</span>
+                                    <span class="job-salary">$75k-100k</span>
+                                </div>
+                            </div>
+
+                            <div class="job-item">
+                                <div class="job-header">
+                                    <h4>Education Technology Specialist</h4>
+                                    <span class="job-location">Remote</span>
+                                </div>
+                                <p>We're looking for a mid-level software engineer to join our team.</p>
+                                <div class="job-meta">
+                                    <span class="job-type"><i class="fas fa-clock"></i> Full-time</span>
+                                    <span class="job-salary">$90k-140k</span>
+                                </div>
+                            </div>
+
+                            <div class="job-item">
+                                <div class="job-header">
+                                    <h4>Student Success Manager</h4>
+                                    <span class="job-location">Remote</span>
+                                </div>
+                                <p>We're looking for a mid-level student success manager to join our team.</p>
+                                <div class="job-meta">
+                                    <span class="job-type"><i class="fas fa-clock"></i> Full-time</span>
+                                    <span class="job-salary">$65k-85k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hiring-image">
+                        <img src="assets/team.jpg" alt="Team" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer Main Content -->
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <div class="logo-circle">
+                                <span class="logo-text">LF</span>
+                            </div>
+                            <span class="brand-text">LearnFlare</span>
+                        </div>
+                        <p class="footer-description">
+                            Empowering learners worldwide with classical education for the future. Join thousands of
+                            students on their learning journey.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="kids.html">Kids Courses</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Courses -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Popular Courses</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Python Programming</a></li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Data Science</a></li>
+                            <li><a href="#">AI & Machine Learning</a></li>
+                            <li><a href="#">Cybersecurity</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Support</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Student Support</a></li>
+                            <li><a href="#">Technical Support</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Contact Info</h5>
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Education St.<br>Learning City, LC 12345</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>hello@learnflare.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsletter-section">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-3 mb-lg-0">
+                                <h4 class="newsletter-title">Stay Updated</h4>
+                                <p class="newsletter-description">Subscribe to our newsletter for the latest courses and
+                                    educational insights.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <form class="newsletter-form">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" placeholder="Enter your email address"
+                                            required>
+                                        <button class="btn btn-newsletter" type="submit">
+                                            Subscribe
+                                            <i class="fas fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-bottom">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-2 mb-lg-0">
+                                <p class="copyright">© 2025 LearnFlare. All rights reserved.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="footer-legal">
+                                    <a href="#">Privacy Policy</a>
+                                    <a href="#">Terms of Service</a>
+                                    <a href="#">Cookie Policy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

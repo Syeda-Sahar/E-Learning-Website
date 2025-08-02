@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnFlare - A Classical Education for the Future</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <div class="logo-circle">
+                    <span class="logo-text">LF</span>
+                </div>
+                <span class="brand-text">LearnFlare</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto me-4">
+                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="pricing.html">Pricing</a>
+                    <a class="nav-link" href="about.html">About Us</a>
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-outline-primary me-2 mb-2 mb-lg-0" href="kids.html">Kids Courses</a>
+                </div>
+                <div class="d-flex flex-column flex-lg-row gap-2">
+                    <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-register" data-bs-toggle="modal"
+                        data-bs-target="#registerModal">Register</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Welcome Back to Learnify</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword"
+                                placeholder="Enter your password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-lg">Sign In</button>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="#" class="text-decoration-none">Forgot your password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Don't have an account?
+                        <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal"
+                            class="text-decoration-none fw-bold">Create one here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Join Learnify Today</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="registerName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="registerName" placeholder="Enter your full name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="registerPassword"
+                                placeholder="Create a password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword"
+                                placeholder="Confirm your password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">
+                                I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a
+                                    href="#" class="text-decoration-none">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-lg">Create Account</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <p class="mb-0">Already have an account?
+                        <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal"
+                            class="text-decoration-none fw-bold">Sign in here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <!-- Left Content -->
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            A Classical Education for the
+                            <span class="highlight">Future</span>
+                        </h1>
+                        <p class="hero-description">
+                            We prepare you to engage in the world that is and to help bring about a world that ought to
+                            be
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-get-started" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">Get started</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+
+                        <img src="assets/girl.png" alt="Student with backpack" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container-fluid bg-warning p-4"></div>
+    <!-- Courses Section -->
+    <section class="courses-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Popular <span class="highlight">Courses</span></h2>
+                    <p class="section-subtitle">Master in-demand skills with our comprehensive course catalog</p>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="row g-4">
+                <!-- Python Programming -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4 class="course-title">Python Programming</h4>
+                            <p class="course-description">Learn Python from basics to advanced concepts. Perfect for
+                                beginners and aspiring data scientists.</p>
+                            <div class="course-meta">
+                                <span class="course-duration"><i class="far fa-clock"></i> 12 weeks</span>
+                                <span class="course-level">Beginner</span>
+                            </div>
+                            <div class="course-price">$99</div>
+                            <button class="btn btn-course" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4 class="course-title">Web Development</h4>
+                            <p class="course-description">Build modern websites with HTML, CSS, JavaScript, and popular
+                                frameworks like React and Node.js.</p>
+                            <div class="course-meta">
+                                <span class="course-duration"><i class="far fa-clock"></i> 16 weeks</span>
+                                <span class="course-level">Intermediate</span>
+                            </div>
+                            <div class="course-price">$149</div>
+                            <button class="btn btn-course" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile App Development -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4 class="course-title">Mobile App Development</h4>
+                            <p class="course-description">Create iOS and Android apps using React Native, Flutter, and
+                                native development tools.</p>
+                            <div class="course-meta">
+                                <span class="course-duration"><i class="far fa-clock"></i> 14 weeks</span>
+                                <span class="course-level">Intermediate</span>
+                            </div>
+                            <div class="course-price">$179</div>
+                            <button class="btn btn-course" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artificial Intelligence -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4 class="course-title">Artificial Intelligence</h4>
+                            <p class="course-description">Dive into AI fundamentals, machine learning, neural networks,
+                                and build intelligent applications.</p>
+                            <div class="course-meta">
+                                <span class="course-duration"><i class="far fa-clock"></i> 20 weeks</span>
+                                <span class="course-level">Advanced</span>
+                            </div>
+                            <div class="course-price">$249</div>
+                            <button class="btn btn-course" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4 class="course-title">Data Science</h4>
+                            <p class="course-description">Master data analysis, visualization, statistics, and machine
+                                learning with real-world projects.</p>
+                            <div class="course-meta">
+                                <span class="course-duration"><i class="far fa-clock"></i> 18 weeks</span>
+                                <span class="course-level">Intermediate</span>
+                            </div>
+                            <div class="course-price">$199</div>
+                            <button class="btn btn-course" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4 class="course-title">Cybersecurity</h4>
+                            <p class="course-description">Learn ethical hacking, network security, and protect systems
+                                from cyber threats and attacks.</p>
+                            <div class="course-meta">
+                                <span class="course-duration"><i class="far fa-clock"></i> 15 weeks</span>
+                                <span class="course-level">Advanced</span>
+                            </div>
+                            <div class="course-price">$229</div>
+                            <button class="btn btn-course" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Computing -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4 class="course-title">Cloud Computing</h4>
+                            <p class="course-description">Master AWS, Azure, and Google Cloud platforms. Learn to deploy
+                                and manage cloud infrastructure.</p>
+                            <div class="course-meta">
+                                <span class="course-duration"><i class="far fa-clock"></i> 12 weeks</span>
+                                <span class="course-level">Intermediate</span>
+                            </div>
+                            <div class="course-price">$189</div>
+                            <button class="btn btn-course" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UI/UX Design -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4 class="course-title">UI/UX Design</h4>
+                            <p class="course-description">Create beautiful and user-friendly interfaces using Figma,
+                                Adobe XD, and design principles.</p>
+                            <div class="course-meta">
+                                <span class="course-duration"><i class="far fa-clock"></i> 10 weeks</span>
+                                <span class="course-level">Beginner</span>
+                            </div>
+                            <div class="course-price">$129</div>
+                            <button class="btn btn-course" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <div class="course-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="course-content">
+                            <h4 class="course-title">DevOps Engineering</h4>
+                            <p class="course-description">Learn CI/CD, Docker, Kubernetes, and automation tools to
+                                streamline development workflows.</p>
+                            <div class="course-meta">
+                                <span class="course-duration"><i class="far fa-clock"></i> 16 weeks</span>
+                                <span class="course-level">Advanced</span>
+                            </div>
+                            <div class="course-price">$219</div>
+                            <button class="btn btn-course" data-bs-toggle="modal" data-bs-target="#registerModal">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Courses Button -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <a href="pricing.html" class="btn btn-outline-primary btn-lg">View All Courses</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <div class="logo-circle">
+                                <span class="logo-text">LF</span>
+                            </div>
+                            <span class="brand-text">LearnFlare</span>
+                        </div>
+                        <p class="footer-description">
+                            Empowering learners worldwide with classical education for the future. Join thousands of
+                            students on their learning journey.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Quick Links</h5>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="kids.html">Kids Courses</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Courses -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Popular Courses</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Python Programming</a></li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Data Science</a></li>
+                            <li><a href="#">AI & Machine Learning</a></li>
+                            <li><a href="#">Cybersecurity</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Support</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Student Support</a></li>
+                            <li><a href="#">Technical Support</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-section">
+                        <h5 class="footer-title">Contact Info</h5>
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>123 Education St.<br>Learning City, LC 12345</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>hello@learnflare.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsletter-section">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-3 mb-lg-0">
+                                <h4 class="newsletter-title">Stay Updated</h4>
+                                <p class="newsletter-description">Subscribe to our newsletter for the latest courses and
+                                    educational insights.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <form class="newsletter-form">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" placeholder="Enter your email address"
+                                            required>
+                                        <button class="btn btn-newsletter" type="submit">
+                                            Subscribe
+                                            <i class="fas fa-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-bottom">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 mb-2 mb-lg-0">
+                                <p class="copyright">© 2025 LearnFlare. All rights reserved.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="footer-legal">
+                                    <a href="#">Privacy Policy</a>
+                                    <a href="#">Terms of Service</a>
+                                    <a href="#">Cookie Policy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
