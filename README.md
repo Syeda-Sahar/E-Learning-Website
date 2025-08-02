@@ -1,7 +1,7 @@
 # 💻 LearnFlare 
 
 **LearnFlare** is a modern E-Learning website designed to help learners grow with ease and flexibility.  
-An engaging, responsive E-learning platform built using HTML, CSS, Bootstrap 5, and custom media queries. LearnFlare provides a clean and modern learning experience for both adults and kids, featuring dedicated sections, smooth navigation, and call-to-action flows.
+An engaging, responsive E-learning platform built using HTML, CSS, Bootstrap 5, and custom media queries. LearnFlare offers a clean and modern learning experience for both adults and children, featuring dedicated sections, smooth navigation, and intuitive call-to-action flows.
 
 ---
 
@@ -40,7 +40,7 @@ An engaging, responsive E-learning platform built using HTML, CSS, Bootstrap 5, 
 
 
 ## 🌐 Live Demo  
-👉 [Click here to view the live form]()
+👉 [Click here to view the live form](https://syeda-sahar-e-learning-website.netlify.app/)
 
 
 ---
